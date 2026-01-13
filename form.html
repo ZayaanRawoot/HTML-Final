@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Form assignment session 13</title>
+</head>
+
+<body>
+    <h1>Contact</h1>
+    <!-- form -->
+    <form action="form_submission.html" name="contact" method="post" id="contact">
+
+        <!-- Full name -->
+        <label for="name">Full name</label>
+        <input type="text" name="name" id="name" placeholder="Full Name" required>
+        <br>
+
+        <!-- Email -->
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email" required>
+        <br>
+
+        <!-- Password -->
+        <label>Password:</label>
+
+        <!-- Regex -->
+        <p>Required for password</p>
+        <ul>
+            <li>At least 1 Uppercase</li>
+            <li>At least 1 Lowercase</li>
+            <li>At least 1 Number or least 1 symbol, symbol allowed: !@#$%^&*_=+-</li>
+            <li>Min length 8 characters</li>
+        </ul>
+
+        <input type="password" name="password" placeholder="Password" required
+            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+        <br>
+
+        <!-- Age -->
+        <label for="Age">Age (18-60)</label>
+        <input id="Age" type="number" name="age" placeholder="Enter your age" min="18" max="60" required>
+        <br>
+
+        <!-- Gender -->
+        <p>Gender</p>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" required value="female">
+        <br>
+
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <br>
+
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other">
+        <br>
+
+        <!-- Interests -->
+        <p>Interests:</p>
+        <label for="coding">Coding</label>
+        <input type="checkbox" name="interests" id="coding" value="coding_checked" required>
+        <br>
+
+        <label for="reading">Reading</label>
+        <input type="checkbox" name="interests" id="reading" value="reading_checked">
+        <br>
+
+        <label for="travelling">Travelling</label>
+        <input type="checkbox" name="interests" id="travelling" value="travelling_checked">
+        <br>
+
+        <!-- Country -->
+        <label for="country">Select country</label>
+        <select name="country" id="country" required multiple>
+            <option value="sa">South Africa</option>
+            <option value="japan">Japan</option>
+            <option value="thailand">Thailand</option>
+            <option value="usa">United States</option>
+            <option value="uk">United Kingdom</option>
+        </select>
+
+
+        <!-- Username -->
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Username" required>
+        <br>
+
+        <!-- Phone number -->
+        <label for="number">Phone Nnumber (xxx-xxx-xxxx)</label>
+        <input type="text" id="number" name="number" required pattern="\d{3}-\d{3}-\d{4}">
+        <br>
+
+        <!-- Message -->
+        <label>Message</label>
+        <textarea name="message" placeholder="Message" required></textarea>
+        <br>
+
+        <!-- Buttons -->
+        <button type="submit">Submit Form</button>
+        <br>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+
+</html>
